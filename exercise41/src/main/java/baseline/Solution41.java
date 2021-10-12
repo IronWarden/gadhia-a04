@@ -5,44 +5,69 @@
 
 package baseline;
 
-import java.util.ArrayList;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.*;
 
 public class Solution41 {
+
     public static void main(String[] args) {
-        readData();
+
+        List<String> names;
+       names = sortArrayList();
+
+
+        outputasFile(names);
+
+    }
+
+    private static void outputasFile(List<String> names) {
+        // use try and catch, try (Formatter output = new  Formatter ("exercise41_output.txt"))
+        try(Formatter output = new Formatter("data/exercise41_output.txt") ) {
+            int val = 0;
+            // once sorted we can iterate through the ArrayList and output the data in the file
+
+
+            while(names.size() > val) {
+                output.format("%n%s", names.get(val));
+                val++;
+            }
+        }
+
+        catch(FileNotFoundException | SecurityException | FormatterClosedException e ) {
+            e.printStackTrace();
+        }
+    }
+
+    private List<String> readData() {
+        ArrayList<String > names = new ArrayList<>();
         // Read the list of names from a file called 'exercise41_input.txt'
         // use try and catch, try to scan Paths.get("exercise41_input.txt")
-        // catch IO“IOException | NoSuchElementException | IllegalStateException e) {
-        // e.printStackTrace();”
 
+        try ( Scanner in = new Scanner(Paths.get("data/exercise41_input.txt"))) {
 
-        // to read the file we can use the while loop (input.hasNext())
-        // store the input into an ArrayList
+            // to read the file we can use the while loop (input.hasNext())
+            while(in.hasNext()) {
+                // store the input in an arraylist
+                names.add(in.nextLine());
+            }
+        }
 
+        catch(IOException | NoSuchElementException | IllegalStateException e) {
+            e.printStackTrace();
+        }
+        return names;
+    }
 
+    public static List<String> sortArrayList() {
 
-       // To sort the name we can use the ArrayList function
+        Solution41 app = new Solution41();
+        List<String> names = app.readData();
+        // To sort the name we can use the ArrayList function
         // Collections.sort can sort in alphabetical order
-        sortArrayList();
+        Collections.sort(names);
 
-
-        outputasFile();
-        // output as `exercise41_output.txt`
-        // use try and catch, try (Formatter output = new  Formatter ("exercise41_output.txt"))
-        // catch “SecurityException | FileNotFoundException |FormatterClosedException e) {
-        //  e.printStackTrace
-        // once sorted we can iterate through the ArrayList and output the data in the file
+        return names;
     }
-
-    private void outputasFile() {
-    }
-
-    private void readData() {
-    }
-
-    private ArrayList sortArrayList() {
-
-    }
-
-
 }

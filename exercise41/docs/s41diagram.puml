@@ -1,0 +1,10 @@
+@startuml
+class S41 {
+
+    -getInput()
+    +sortArrayList()
+    -output(ArrayList)names)
+
+
+}
+@enduml
