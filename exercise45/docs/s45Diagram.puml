@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/class-diagram
+class replaceWord {
+    'take the input as a string
+     +getInput()
+     String input = getInput()
+     +replaceWord(String input)
+     'prompt the name of the file
+     +promptName()
+     String name = promptName()
+     'output the file
+     +output(String name, (String input))
+     }
+@enduml
