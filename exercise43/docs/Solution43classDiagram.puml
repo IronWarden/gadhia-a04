@@ -1,0 +1,14 @@
+@startuml
+class GenerateFiles {
+    'prompt for authorName, siteName, jsFolder, cssFolder
+    +promptUser()
+
+    +makehtmlfile(String authorName, String siteName)
+
+    'if the user says 'y' make the folder
+    +makeJsFolder()
+    +makeCssFolder()
+    'output the things created
+    +output()
+}
+@enduml
