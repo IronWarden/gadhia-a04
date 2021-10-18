@@ -1,25 +1,32 @@
 package baseline;
 
 
+
 import java.util.List;
 
 public class MyParser {
     // parse the data without using CSV parser
-    // use the split method to split by the data by the comma
-    // return the new array
+
+
     public String[] parseList(List<String> employees) {
 
         int val = 0;
-        String[] parsedList = new String[100];
-        while(employees.size() > val) {
 
+        String[] parsedEmployee = null;
+        while(employees.size() > val) {
+            // use the split method to split by the data by the comma
             String employee = employees.get(val);
-            parsedList = employee.split(",");
+            parsedEmployee = employee.split(",");
+
+
+            // printing here is the simplest way
+            System.out.println(parsedEmployee[0] + " " +
+                    parsedEmployee[1] + " " +  " " + parsedEmployee[2]);
             val++;
 
         }
-
-       return parsedList;
+       // return the new array for testing
+       return parsedEmployee;
     }
 
 

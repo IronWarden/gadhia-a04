@@ -1,7 +1,9 @@
 @startuml
 
 class M {
-
+     +getInput()
+     List<String> employees = getInput();
+     +parseList(employees)
 }
 
 

@@ -14,7 +14,6 @@ public class Solution42 {
         // get input and store into an array of strings using class getInput
         Input input = new Input();
         List<String> employees;
-
         employees = input.getInput();
 
         // parse the data with my own parser class
@@ -22,11 +21,6 @@ public class Solution42 {
 
         MyParser parser = new MyParser();
         parser.parseList(employees);
-
-        // output the file by iterating through the array
-        // use format specifier %-10 to space
-        // print out in stdoutput
-
 
     }
 
