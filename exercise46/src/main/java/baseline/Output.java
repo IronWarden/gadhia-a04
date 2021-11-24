@@ -1,3 +1,9 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solutions
+ *  Copyright 2021 Rishi Gadhia
+ */
+
+
 package baseline;
 
 
@@ -12,11 +18,11 @@ public class Output {
 
         Set<String> keySet = map.keySet();
         Object[] keyArray = keySet.toArray();
-        for (int i = keyArray.length - 1; i >= 0; i--) {
+        for (int i = 0 ; i < keyArray.length; i++) {
             String key = (String)keyArray[i];
             Integer value = map.get(key);
 
-            System.out.println(key + " ");
+            System.out.println(key + " " + value);
 
         }
     }

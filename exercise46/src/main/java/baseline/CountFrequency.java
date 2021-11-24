@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solutions
+ *  Copyright 2021 Rishi Gadhia
+ */
+
 package baseline;
 
 
@@ -12,7 +17,7 @@ public class CountFrequency {
     public Map<String, Integer> countWords(String input) {
         // split the words by space
         
-        String[] words = input.split("\n");
+        String[] words = input.split(" ");
 
 
         Map<String, Integer> map = new HashMap<>();

@@ -57,6 +57,7 @@
       <list>
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="UML Sequence" />
       </list>
     </option>
   </component>
@@ -73,6 +74,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultPlantUmlFileTemplate" value="UML Sequence" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -90,7 +92,7 @@
       <recent name="baseline" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.exercise46 [run]">
+  <component name="RunManager" selected="Gradle.exercise46 [test]">
     <configuration name="exercise46 [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -156,8 +158,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.exercise46 [run]" />
         <item itemvalue="Gradle.exercise46 [test]" />
+        <item itemvalue="Gradle.exercise46 [run]" />
         <item itemvalue="Gradle.exercise46 [check]" />
       </list>
     </recent_temporary>

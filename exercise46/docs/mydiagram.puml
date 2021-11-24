@@ -1,0 +1,33 @@
+@startuml
+ class Solution46 {
+    String word
+    Map<String,Integer> count
+
+    Input input = new Input()
+    word = input.getInput()
+
+
+    CountFrequency countFrequency = new CountFrequency()
+    count = countFrequency.countWord(word);
+
+    Output output = new Output()
+    output.stdoutput(count)
+
+
+ }
+
+ Solution46 --o Input
+ class Input {
+    +getInput()
+ }
+
+ Solution46 --o CountFrequency
+ class CountFrequency {
+    +countWord(String input)
+ }
+
+ Solution46 --o Output
+ class Output {
+    stdOutput(map)
+ }
+@enduml
