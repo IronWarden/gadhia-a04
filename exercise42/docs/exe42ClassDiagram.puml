@@ -1,13 +1,30 @@
 @startuml
 
-class M {
-     +getInput()
-     List<String> employees = getInput();
-     +parseList(employees)
+class Solution42 {
+   List<String> employees
+   Input input = new Input()
+   MyParser parser = new MyParser()
+
+' method to get the input from Input class and update are list
+     employees = input.getInput()
+' method to parse the list and show results
+     parser.parseList(employees)
+
+
 }
 
+Solution42 --o Input
 
+class Input {
+   +getInput()
+}
 
+Solution42 --o MyParser
+
+class MyParser {
+  'parse the list and return it as a String[]
+  +parseList(List<String> employees)
+}
 
 
 @enduml
