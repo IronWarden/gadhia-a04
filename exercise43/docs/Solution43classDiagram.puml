@@ -1,14 +1,52 @@
 @startuml
+class Solution43 {
+    String siteName
+    String authorName
+    String jssFolder
+    String cssFolder
+
+    'get the input
+    PromptUser prompt = new PromptUser()
+    siteName = prompt.promptName()
+    authorName = prompt.promptAuthor()
+    jsFolder = prompt.askJsFolder()
+    cssFolder = prompt.askCssFolder()
+
+    'method to generate index files
+    GenerateFiles generatefiles = new GenerateFiles()
+    generateFiles.generateIndexFile(siteName, authorName)
+
+    ' method if user wants jsFolder
+    generateFiles.generatejsFolder()
+
+    ' method if user wants cssFolder
+    generateFiles.generatecssFolder()
+
+    Output output = new Output()
+    output.outputcreatedFiles(jsFolder, cssFolder)
+
+}
+
+Solution43 --o PromptUser
+class PromptUser {
+    +promptName()
+    +promptAuthor()
+    +askJsFolder()
+    +askCssFolder()
+
+}
+
+Solution43 --o GenerateFiles
+
 class GenerateFiles {
-    'prompt for authorName, siteName, jsFolder, cssFolder
-    +promptUser()
+    +generateIndexFile(String siteName, String authorName)
+    +generatejsFolder()
+    +generatecssFolder()
+}
 
-    +makehtmlfile(String authorName, String siteName)
+Solution43 --o Output
 
-    'if the user says 'y' make the folder
-    +makeJsFolder()
-    +makeCssFolder()
-    'output the things created
-    +output()
+class Output {
+    +outputcreatedFiles(String jsFolder, String cssFolder)
 }
 @enduml

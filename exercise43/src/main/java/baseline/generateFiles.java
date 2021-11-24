@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solutions
+ *  Copyright 2021 Rishi Gadhia
+ */
+
 package baseline;
 
 
@@ -9,7 +14,7 @@ public class GenerateFiles {
     // create the files specified by the input
     // to create files we can use Formatter like in the book
 
-    String path = "data/";
+    String path = "./data/";
 
     public void generateIndexFile(String siteName, String authorName) {
         // use try and catch
