@@ -1,14 +1,30 @@
 @startuml
 'https://plantuml.com/class-diagram
-class replaceWord {
-    'take the input as a string
-     +getInput()
-     String input = getInput()
-     +replaceWord(String input)
-     'prompt the name of the file
-     +promptName()
-     String name = promptName()
-     'output the file
-     +output(String name, (String input))
-     }
+class Solution45 {
+    String word
+    String name
+
+    Input input = new Input()
+    Replace replace = new Replace()
+    word = input.getInput()
+    word = replace.replaceWord(word)
+
+    Output output = new Output()
+    output.outputFile(word, name)
+
+}
+Solution45 --o Input
+class Input {
+    +getInput()
+}
+Solution45 --o Replace
+
+class Replace {
+  +replaceWord()
+}
+
+Solution45 --o Output
+class Output {
+    +outputFile()
+}
 @enduml
