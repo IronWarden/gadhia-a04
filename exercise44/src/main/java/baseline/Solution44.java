@@ -5,6 +5,8 @@
 package baseline;
 public class Solution44 {
     public static void main(String[] args) {
-         // use json parser
+        ParseInput parseInput = new ParseInput();
+        parseInput.parseInput();
+
     }
 }

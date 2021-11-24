@@ -1,0 +1,26 @@
+@startuml
+class Solution44 {
+
+   parseInput()
+}
+
+Solution44 --o Product
+class Product {
+  -String name
+  -String price
+  -String quantity
+
+  Product()
+  setName()
+  getName()
+  setPrice()
+  getPrice()
+  setQuantity()
+  getQuantity()
+
+}
+Solution44 --o ParseInput
+ class ParseInput {
+   +parseInput()
+ }
+@enduml
